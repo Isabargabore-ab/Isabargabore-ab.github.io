@@ -3,5 +3,5 @@ layout: default
 ---
 
 # Välkommen till Isabargabore AB 🚀
-Detta är min hemsida byggd med **GitHub Pages** och Jekyll-tema.
-Gordon ramsay suger kuk
+Detta är min hemsida byggd med **GitHub Pages** och Jekyll-tema. NAKNO GORDON RAMSAY
+
