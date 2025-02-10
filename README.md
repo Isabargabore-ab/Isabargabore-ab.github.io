@@ -23,5 +23,3 @@ Här kan kunder och besökare få information om våra tjänster, produkter och 
 ### 🔹 Klona repositoryt
 För att redigera hemsidan lokalt kan du klona repositoryt till din dator:
 ```bash
-git clone https://github.com/Isabargabore-ab/Isabargabore-ab.github.io.git
-cd Isabargabore-ab.github.io
