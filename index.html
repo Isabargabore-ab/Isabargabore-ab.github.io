@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabargabore AB | SPARTA FITNESS</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="hero">
-        <canvas id="backgroundCanvas"></canvas>
         <div class="overlay"></div>
         <div class="content">
-            <h1>⚔️ SPARTA FITNESS</h1>
+            <h1><i class="fas fa-dumbbell"></i> SPARTA FITNESS <i class="fas fa-dumbbell"></i></h1>
             <p>Träna som en krigare. Lev som en mästare.</p>
         </div>
     </div>
@@ -33,6 +33,16 @@
         <h2>🚀 Framtiden</h2>
         <p>Vi bygger en **digital krigararena** där vi formar nästa generations atleter. Är du redo?</p>
     </section>
+
+    <!-- Chatbot-knapp -->
+    <div id="chatbot-container">
+        <button id="chatbot-toggle">🤖 Chatta med AI</button>
+        <div id="chatbot-box" class="hidden">
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Skriv en fråga..." />
+            <button id="chatbot-send">Skicka</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
