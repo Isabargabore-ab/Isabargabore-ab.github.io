@@ -76,3 +76,35 @@ h2 {
     display: flex;
     justify-content: center;
     flex
+    <!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabargabore AB | Kreativ Innovation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <h1>🚀 Välkommen till Isabargabore AB</h1>
+        <p>Innovation, teknologi och framtid i färg!</p>
+        <button class="btn" id="explore-btn">Utforska mer</button>
+    </div>
+
+    <section id="about" class="hidden">
+        <h2>🌍 Vilka är vi?</h2>
+        <p><b>Isabargabore AB</b> är ett innovativt företag som grundades år 2010. Vi kommer från hjärtat av Sverige och har sedan starten strävat efter att skapa revolutionerande lösningar inom teknik och digitalisering.</p>
+        <p>Med över 14 års erfarenhet har vi hjälpt företag och privatpersoner att anpassa sig till framtidens digitala möjligheter. Vi brinner för **teknologisk utveckling, innovation och hållbarhet**.</p>
+        
+        <h2>📍 Vårt Ursprungsort</h2>
+        <p>Vi grundades i Stockholm, en stad känd för sin startup-kultur och tekniska framsteg. Härifrån har vi expanderat och byggt ett nätverk av kunder och samarbetspartners över hela världen.</p>
+        
+        <h2>🔮 Vår Vision</h2>
+        <p>Vi strävar efter att skapa lösningar som inte bara följer tekniska trender, utan även **sätter nya standarder** för branschen. Vi tror på **färgstark innovation, kreativitet och teknologi** som formar framtiden.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
