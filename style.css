@@ -90,47 +90,6 @@ ul li {
     color: #FFD700;
 }
 
-/* CHATBOT */
-#chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-}
-
-#chatbot-toggle {
-    background: red;
-    color: white;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-#chatbot-box {
-    display: none;
-    width: 300px;
-    height: 400px;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    border-radius: 10px;
-    padding: 15px;
-    position: absolute;
-    bottom: 50px;
-    right: 0;
-    overflow-y: auto;
-}
-
-.hidden {
-    display: none;
-}
-
-/* SCROLLING EFFECT */
-html {
-    scroll-behavior: smooth;
-}
 #chatbot-container {
     position: fixed;
     bottom: 20px;
