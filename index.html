@@ -109,3 +109,31 @@
     </div>
 </body>
 </html>
+
+<script>
+async function askSpartaAI() {
+    const userInput = document.getElementById("chat-input").value;
+    
+    const response = await fetch("DIN_AZURE_OPENAI_API_ENDPOINT", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "api-key": "DIN_AZURE_OPENAI_API_NYCKEL"
+        },
+        body: JSON.stringify({
+            model: "DEPLOYMENT_NAME",
+            messages: [{"role": "user", "content": userInput}]
+        })
+    });
+
+    const data = await response.json();
+    document.getElementById("chat-response").innerText = data.choices[0].message.content;
+}
+</script>
+
+<div id="chat-container">
+    <input type="text" id="chat-input" placeholder="Ställ en fråga till Sparta AI...">
+    <button onclick="askSpartaAI()">Skicka</button>
+    <div id="chat-response"></div>
+</div>
+
