@@ -121,9 +121,11 @@
 
         async function askSpartaAI() {
             const userInput = document.getElementById("chatbot-input").value;
-            chatHistory.push({ "role": "user", "content": userInput });
+            if (!userInput.trim()) return;
             
+            chatHistory.push({ "role": "user", "content": userInput });
             document.getElementById("chatbot-messages").innerHTML += `<p><strong>Du:</strong> ${userInput}</p>`;
+            document.getElementById("chatbot-input").value = "";
             
             const response = await fetch("https://isabar.openai.azure.com/openai/deployments/gpt-35-turbo-0125-spartan-gpt-v1/chat/completions?api-version=2024-08-01-preview", {
                 method: "POST",
@@ -134,16 +136,17 @@
                 body: JSON.stringify({
                     model: "gpt-35-turbo-0125.ft-aa215310a8a7401891f2eab199cfce5b-spartan-gpt-v1",
                     messages: chatHistory,
-                    max_tokens: 300,
-                    temperature: 0.7
+                    max_tokens: 500,
+                    temperature: 0.7,
+                    stream: false
                 })
             });
             
             const data = await response.json();
-            chatHistory.push({ "role": "assistant", "content": data.choices[0].message.content });
+            const aiResponse = data.choices[0].message.content;
+            chatHistory.push({ "role": "assistant", "content": aiResponse });
             
-            document.getElementById("chatbot-messages").innerHTML += `<p><strong>Sparta AI:</strong> ${data.choices[0].message.content}</p>`;
-            document.getElementById("chatbot-input").value = "";
+            document.getElementById("chatbot-messages").innerHTML += `<p><strong>Sparta AI:</strong> ${aiResponse}</p>`;
         }
     </script>
 </body>
