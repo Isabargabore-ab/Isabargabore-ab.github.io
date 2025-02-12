@@ -143,10 +143,11 @@
             });
             
             const data = await response.json();
-            const aiResponse = data.choices[0].message.content;
-            chatHistory.push({ "role": "assistant", "content": aiResponse });
-            
-            document.getElementById("chatbot-messages").innerHTML += `<p><strong>Sparta AI:</strong> ${aiResponse}</p>`;
+            if (data.choices && data.choices.length > 0) {
+                const aiResponse = data.choices[0].message.content;
+                chatHistory.push({ "role": "assistant", "content": aiResponse });
+                document.getElementById("chatbot-messages").innerHTML += `<p><strong>Sparta AI:</strong> ${aiResponse}</p>`;
+            }
         }
 
         document.getElementById("chatbot-input").addEventListener("keypress", function(event) {
